@@ -13,8 +13,15 @@ import FormData from "./../src/FormData/FormData";
 import ServiceDetails from "./pages/Services/ServiceDetail/ServiceDetails";
 import MainNavigation from "./components/Layout/MainNavigation";
 import AuthForm from "./components/Auth/AuthForm";
+import { useContext } from "react";
+import { AuthContext } from "./context/AuthContext";
 
 function App() {
+  const currentUser = useContext(AuthContext);
+  const RequireAuth = ({ children }) => {
+    return currentUser ? children : <Navigate to="/loginform" />;
+  };
+
   return (
     <div className="App">
       <Nav />
@@ -24,7 +31,15 @@ function App() {
         {/* <Route path="/aboutus" element={<About />}></Route> */}
         <Route path="/services" element={<Services />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
-        <Route path="/formdata" element={<FormData />}></Route>
+        <Route
+          path="/formdata"
+          å
+          element={
+            <RequireAuth>
+              <FormData />
+            </RequireAuth>
+          }
+        ></Route>
         <Route path="/loginform" element={<AuthForm />}></Route>
         <Route path="/services/:serviceId" element={<ServiceDetails />}></Route>
         <Route path="*" element={<NotFound />}></Route>
