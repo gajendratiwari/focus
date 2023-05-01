@@ -1,0 +1,26 @@
+.eventData {
+  background-color: var(--color-secondary);
+  grid-column: col-start 10 / center-end;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  place-items: center;
+}
+
+.eventDataContent {
+  transform: rotate(90deg);
+}
+
+.eventDataContentTitle {
+  font-size: var(--font-size-title);
+  font-weight: 500;
+  color: white;
+  letter-spacing: 0.2rem;
+}
+
+
+@media screen and (max-width: 600px) {
+  .eventData {
+    display: none;
+  }
+}

@@ -1,0 +1,44 @@
+.container{
+    grid-column:center-start/col-end 5;
+    /* background: linear-gradient(
+        var(--color-secondary-m-light),
+        var(--color-secondary-m-light)
+        
+       ); */
+       margin: 20px;
+     }
+.addressContent{
+    display: grid;
+    gap: 4vh; 
+    margin: 20px;
+}
+
+.address{
+    display: grid;
+    gap: 4vh;
+}
+
+.addressContent div {
+    font-size: 20px;
+}
+.addressContent div:nth-child(1){
+    color: rgb(12, 19, 25);
+    font-size: 30px;
+ }
+
+.addressContent div:nth-child(2){
+   color: rgb(157, 187, 214);
+   font-size: 20px;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+@media screen and (max-width:600px){
+    .container {
+      grid-column: center-start / center-end;
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    }
+   }
+
+
+
+

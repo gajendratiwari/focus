@@ -1,0 +1,123 @@
+.contactForm{
+    grid-column:col-end 5/center-end;
+    background:linear-gradient(
+var(--color-primary-m-light),
+var(--color-secondary-m-light)
+    );
+    margin: 20px;
+    border-radius: 5px;
+    width : 500px
+ }
+
+ .cotactFormContent{
+  margin: 20px;
+ }
+
+ .cotactFormContent p{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: x-large;
+  margin-bottom: 10px;
+ }
+
+.formcontrol {
+    margin-bottom: 1rem;
+  }
+  
+  .formcontrol input,
+  .formcontrol label {
+    display: block;
+  }
+  
+  .formcontrol label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .formcontrol input,
+  .formcontrol select {
+    font: inherit;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 20rem;
+    max-width: 100%;
+  }
+  
+  .formcontrol input:focus {
+    outline: none;
+    border-color: #240370;
+    background-color: #e0d4fd;
+  }
+  
+  .controlgroup {
+    display: flex;
+    column-gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .controlgroup .formcontrol {
+    min-width: 15rem;
+    flex: 1;
+  }
+  
+  .formactions button {
+    font: inherit;
+    background-color: #240370;
+    color: white;
+    border: 1px solid #240370;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+  }
+  
+  .formactions button:disabled,
+  .formactions button:disabled:hover,
+  .formactions button:disabled:active {
+    background-color: #ccc;
+    color: #3f3f3f;
+    border-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .formactions button:hover,
+  .formactions button:active {
+    background-color: #33059e;
+    border-color: #33059e;
+  }
+  
+  .formactions {
+    text-align: right;
+  }
+  
+  .formactions button {
+    margin-left: 1rem;
+  }
+  
+  .invalid input {
+    border: 1px solid #b40e0e;
+    background-color: #fddddd;
+  }
+  
+  .invalid input:focus {
+    border-color: #ff8800;
+    background-color: #fbe8d2;
+  }
+  
+  .errortext {
+    color: #b40e0e;
+     font: inherit;
+    font-size: 15px;
+  }
+
+  .successMessage
+  {background-color: #43ac6a;
+  border-color: #3a945b;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  }

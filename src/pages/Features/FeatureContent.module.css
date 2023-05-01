@@ -1,0 +1,78 @@
+.featureContent {
+  background-color: var(--color-primary);
+  grid-column: container-start / col-end 9;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
+
+.featureContent > div {
+  padding: var(--padding-section);
+  display: grid;
+  grid-template-areas: 
+  "title"
+  "para";
+  gap: 4vh;
+  align-items: center;
+  justify-items: start;
+}
+
+.featureContent > div h2 {
+  grid-area: title;
+  font-size: var(--font-size-title);
+  color: white;
+  font-weight:400;
+
+}
+
+.featureContent > div p {
+  grid-area: para;
+  
+  color: white;
+  font-weight:500;
+
+}
+
+.featureContent> div:first-child {
+  background:linear-gradient(var(--color-secondary-m-light), var(--color-secondary-m-light)),
+  url(./../../asset/img/Features/cocktail.jpg);
+  border-right: solid 0.2rem var(--color-secondary);
+  background-size: cover;
+  background-position: left;
+}
+
+.featureContent> div:last-child {
+  background:linear-gradient(var(--color-secondary-m-light), var(--color-secondary-m-light)),
+  url(./../../asset/img/Features/cocktail.jpg);
+  border-left: solid 0.2rem var(--color-secondary);
+  background-size: cover;
+  background-position: left;
+}
+
+
+
+.featureContentPara {
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 800px) {
+  .featureContent > div:first-child,
+  .featureContent > div:last-child {
+    border: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .featureContent > div:first-child,
+  .featureContent > div:last-child {
+    border: none;
+  }
+
+  .featureContent {
+    grid-column: center-start / center-end;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  }
+
+  .featureContent > div p {
+    font-size: 1.5rem;
+  }
+}

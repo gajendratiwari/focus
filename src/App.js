@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+//import "./App.css";
+
+import { Navigate, Route, Routes } from "react-router-dom";
+
+import Home from "./pages/Home/Home";
+import About from "./pages/About/About";
+import Services from "./pages/Services/Services";
+import Contact from "./pages/Contact/Contact";
+import NotFound from "./pages/NotFound";
+import Nav from "./components/Navigation/Nav";
+import Footer from "./pages/Footer/Footer";
+import FormData from "./../src/FormData/FormData";
+import ServiceDetails from "./pages/Services/ServiceDetail/ServiceDetails";
+import MainNavigation from "./components/Layout/MainNavigation";
+import AuthForm from "./components/Auth/AuthForm";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Nav />
+      <MainNavigation />
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        {/* <Route path="/aboutus" element={<About />}></Route> */}
+        <Route path="/services" element={<Services />}></Route>
+        <Route path="/contact" element={<Contact />}></Route>
+        <Route path="/formdata" element={<FormData />}></Route>
+        <Route path="/loginform" element={<AuthForm />}></Route>
+        <Route path="/services/:serviceId" element={<ServiceDetails />}></Route>
+        <Route path="*" element={<NotFound />}></Route>
+      </Routes>
+      <Footer />
     </div>
   );
 }

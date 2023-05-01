@@ -1,0 +1,36 @@
+.motto {
+  background-color: var(--color-primary);
+  grid-column: container-start/container-end;
+
+  padding: 10vh 3vw;
+}
+
+.mottoContent {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.mottoContentTitle {
+  font-size: var(--font-size-title);
+  padding: 0 2rem 1rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  position: relative;
+}
+.mottoContentTitle::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 45%;
+  height: 0.2rem;
+  width: 20%;
+  background-color: white;
+}
+
+@media screen and (max-width: 600px) {
+  .mottoContentPara {
+    font-size: 1.5rem;
+  }
+}

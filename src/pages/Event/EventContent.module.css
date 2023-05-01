@@ -1,0 +1,76 @@
+.eventContent {
+  grid-column: container-start/col-end 9;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.eventContent > div {
+  padding: var(--padding-section);
+  display: grid;
+  grid-template-areas:
+    "title"
+    "para";
+
+  gap: 4vh;
+  align-items: center;
+  justify-items: start;
+}
+
+.eventContent > div h2 {
+  grid-area: title;
+  font-size: var(--font-size-title);
+  font-weight: 400;
+  color: white;
+}
+
+.eventContent > div p {
+  grid-area: para;
+  color: white;
+  font-weight: 500;
+}
+
+.eventContent > div:first-child {
+  background: linear-gradient(
+      var(--color-tertiary-m-light),
+      var(--color-tertiary-m-light)
+    ),
+    url("../../asset/img/Events/industryConnect.jpg");
+  border-right: solid 0.2rem var(--color-tertiary);
+}
+
+.eventContent > div:last-child {
+  background: linear-gradient(
+      var(--color-tertiary-m-light),
+      var(--color-tertiary-m-light)
+    ),
+    url("../../asset/img/Events/culture-discovery.jpg");
+  border-left: solid 0.2rem var(--color-tertiary);
+}
+
+.eventContent > div:first-child,
+.eventContent > div:last-child {
+  background-size: cover;
+  background-position: center;
+}
+
+.eventContent > div p {
+  grid-area: para;
+  color: white;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 600px) {
+  .eventContent > div:first-child,
+  .eventContent > div:last-child {
+    border: none;
+  }
+
+  .eventContent {
+    grid-column: center-start / center-end;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  }
+
+  .eventContent > div p {
+    font-size: 1.5rem;
+  }
+}

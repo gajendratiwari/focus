@@ -1,0 +1,276 @@
+.header {
+  grid-column: container-start/ container-end;
+  background: linear-gradient(
+      var(--color-primary-m-light),
+      var(--color-primary-m-light)
+    ),
+    url(../../asset/img/headerBackground1-1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Nav */
+.headermainnav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 6;
+}
+
+.headermainnav input[type="checkbox"] {
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+  height: 5rem;
+  width: 5rem;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 3;
+}
+
+/* hamburger */
+.headermainnavhamburger {
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+  height: 5rem;
+  width: 5rem;
+  padding: 1rem;
+  background-color: var(--color-secondary);
+  z-index: 2;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  display: grid;
+  place-items: center;
+
+  animation: main-nav 2s;
+}
+
+@keyframes main-nav {
+  0% {
+    transform: translateX(150rem) rotate(1800deg);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0) rotate(0);
+    opacity: 1;
+  }
+}
+
+/* hamburgerlies */
+.headermainnavhamburger > div {
+  position: relative;
+  height: 0.3rem;
+  width: 100%;
+  background-color: var(--color-quaternary);
+
+  display: grid;
+  place-items: center;
+  transition: all var(--transition-duration) ease-in-out;
+}
+
+/* hamburger top and bottom lines */
+.headermainnavhamburger > div::before,
+.headermainnavhamburger > div::after {
+  content: "";
+  position: absolute;
+  top: -1rem;
+  width: 60%;
+  height: inherit;
+  background-color: inherit;
+  z-index: 2;
+}
+
+.headermainnavhamburger > div::before {
+  left: 0;
+}
+
+.headermainnavhamburger > div::after {
+  top: 1rem;
+  right: 0;
+}
+/* 
+Rotating the menu */
+.headermainnav input[type="checkbox"]:checked + .headermainnavhamburger > div {
+  transform: rotate(135deg);
+}
+
+.headermainnav
+  input[type="checkbox"]:checked
+  + .headermainnavhamburger
+  > div::before {
+  left: 0;
+  top: 0;
+  width: 100%;
+  transform: rotate(270deg);
+}
+
+.headermainnav
+  input[type="checkbox"]:checked
+  + .headermainnavhamburger
+  > div::after {
+  opacity: 0;
+}
+
+.headermainnav
+  input[type="checkbox"]:checked:hover
+  + .headermainnavhamburger
+  > div {
+  transform: rotate(405deg);
+}
+
+/* links menu */
+.headermainnavmenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  visibility: hidden;
+  overflow: hidden;
+
+  display: grid;
+  place-items: center;
+}
+
+.headermainnavmenu > div {
+  background-color: var(--color-secondary-m-dark);
+  height: 200%;
+  width: 200%;
+
+  display: grid;
+  place-items: center;
+
+  transform: scaleX(0);
+  transition: all var(--transition-duration) ease-in-out;
+}
+.headermainnavmenu > div > div {
+  text-align: center;
+  max-width: 90vw;
+  max-height: 100vh;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Displaying the Menu when the checkbox is checked */
+
+.headermainnav input[type="checkbox"]:checked ~ .headermainnavmenu {
+  visibility: visible;
+}
+
+
+
+
+.headermainnav input[type="checkbox"]:checked ~ .headermainnavmenu > div {
+  transform: scaleX(1);
+  transition: 1s;
+}
+
+.headermainnav input[type="checkbox"]:checked ~ .headermainnavmenu > div > div {
+  opacity: 1;
+}
+
+.headermainnavmenu ul li a:link,
+.headermainnavmenu ul li a:visited {
+  z-index: 5;
+  font-size: calc(1.5rem + 0.5vw);
+  
+  
+}
+
+
+
+
+
+.headermainnavmenu ul li a:link::before,
+.headermainnavmenu ul li a:visited::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  transform: scaleY(0);
+  background-color: var(--color-primary-m-dark);
+  transition: transform var(--transition-duration) ease-in-out;
+}
+
+.headermainnavmenu ul li a:hover::before,
+.headermainnavmenu ul li a:active::before {
+  transform: scaleY(1);
+  
+}
+
+
+
+/* remaining header section */
+
+.headerLogoContent {
+  display: grid;
+  grid-template-columns: 1fr minmax(30rem, 1fr) 1fr;
+  grid-template-rows: min-content;
+  height: 90%;
+  justify-items: center;
+}
+
+.headerLogoContentLogo {
+  grid-column: 2/3;
+  letter-spacing: 0.2rem;
+}
+
+.headerLogoContentLogo span {
+  color: var(--color-tertiary);
+  font-size: 3rem;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.headerContent {
+  grid-column: 1/-1;
+  align-self: center;
+}
+
+.headerContentTitle {
+  font-size: calc(4rem+4vw);
+  font-weight: 300;
+  color: aliceblue;
+  text-transform: uppercase;
+  padding: 0 2rem 0 var(--font-size-title);
+}
+.headerContentPara {
+  font-size: calc(1re + 2vw);
+  font-weight: 500;
+  padding: 2vh 2rem 6vh var(--font-size-title);
+}
+
+.headerContentLink:link,
+.headerContentLink:visited {
+  margin-left: var(--font-size-title);
+  border: 0.2rem solid var(--color-tertiary);
+}
+
+.headerContentLink:link::before,
+.headerContentLink:visited::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--color-tertiary);
+  transform: scaleX(0);
+  transition: transform 0.45s cubic-bezier(1, 0, 0, 1);
+  z-index: -1;
+}
+.headerContentLink:hover::before,
+.headerContentLink:active::before {
+  transform: scaleX(1);
+}
+
+@media screen and (max-width: 600px) {
+  .headerContentPara {
+    font-size: 2rem;
+  }
+}

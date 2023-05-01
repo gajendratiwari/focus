@@ -1,0 +1,35 @@
+.featureText {
+  background-color: var(--color-tertiary);
+  grid-column: col-start 10 / center-end;
+}
+
+
+
+.featureText {
+  background-color: var(--color-tertiary);
+  grid-column: col-start 10 / center-end;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  place-items: center;
+}
+
+.featureTextContent {
+  transform: rotate(90deg);
+}
+
+.featureTextContentTitle {
+  font-size: var(--font-size-title);
+  font-weight: 500;
+  color: white;
+  letter-spacing: 0.2rem;
+}
+
+
+
+@media screen and (max-width: 600px) {
+  .featureText {
+    display: none;
+    
+  }
+}

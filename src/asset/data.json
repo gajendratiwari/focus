@@ -1,0 +1,58 @@
+
+ [
+  {"id":"0001",
+    "testmonials" : {
+
+        "testmonial":
+    [
+        { "id": "5001", "name": "Bishal", "comment":"I am bishal bhandari", "img":"https://pm.epages.com/WebRoot/Store/Shops/apidocu/51E7/F905/2E4C/78C2/30C2/AC14/145F/A4E5/013-headphone-red_h.jpg"},
+        { "id": "5002", "name": "safal", "comment":"I am a boka", "img":"https://pm.epages.com/WebRoot/Store/Shops/apidocu/51E7/F905/2E4C/78C2/30C2/AC14/145F/A4E5/013-headphone-red.jpg"},
+        { "id": "5003", "name": "Saroj", "comment":"I am bishal bhandari","img":"https://pm.epages.com/WebRoot/Store/Shops/apidocu/51E7/F905/2E4C/78C2/30C2/AC14/145F/A4E5/013-headphone-red_h.jpg" },
+        { "id": "5004", "name": "Gajendra", "comment":"I am bishal bhandari","img":"https://pm.epages.com/WebRoot/Store/Shops/apidocu/51E7/F905/2E4C/78C2/30C2/AC14/145F/A4E5/013-headphone-red_h.jpg" },
+        { "id": "5005", "name": "Kalas", "comment":"I am bishal bhandari","img":"https://pm.epages.com/WebRoot/Store/Shops/apidocu/51E7/F905/2E4C/78C2/30C2/AC14/145F/A4E5/013-headphone-red_h.jpg" },
+        { "id": "5006", "name": "Kamal", "comment":"I am bishal bhandari","img":"https://pm.epages.com/WebRoot/Store/Shops/apidocu/51E7/F905/2E4C/78C2/30C2/AC14/145F/A4E5/013-headphone-red_xs.jpg" }
+ 
+    ] 
+    },
+    "id":"002",
+    "services":{
+        "service":[
+            { "id": "1",
+            "title": "Web Design",
+            "description":
+              "Get hands-on training in user-centric design research, design thinking, HTML/CSS & more. Build a UX design portfolio of dynamic  projects to help you stand out from the crowd. Hands-on classes. Real-world projects." },
+              {
+               "id": "2",
+                "title": "Graphic Design",
+                "description":
+                  "Get hands-on training in user-centric design research, design  thinking, HTML/CSS & more. Build a UX design portfolio of dynamic  projects to help you stand out from the crowd. Hands-on classes. Real-world projects."
+              },
+              {
+                "id": "3",
+               "title": " Diploma In Computer Application",
+               " description":
+                  " Get hands-on training in user-centric design research, design thinking, HTML/CSS & more. Build a UX design portfolio of dynamic projects to help you stand out from the crowd. Hands-on classes. Real-world projects."
+              },
+              {
+                "id": "4",
+                "title": "CISCO Routing & Switching",
+                "description":
+                  "Get hands-on training in user-centric design research, design  thinking, HTML/CSS & more. Build a UX design portfolio of dynamic  projects to help you stand out from the crowd. Hands-on classes. Real-world projects."
+              },
+              {
+                "id": "5",
+                "title": "Hardware and Networking",
+                "description":
+                  "Get hands-on training in user-centric design research, design  thinking, HTML/CSS & more. Build a UX design portfolio of dynamic  projects to help you stand out from the crowd. Hands-on classes. Real-world projects."
+              },
+              {
+               " id": "6",
+                "title": "Accounting Package",
+                "description":
+                  "Get hands-on training in user-centric design research, design  thinking, HTML/CSS & more. Build a UX design portfolio of dynamic  projects to help you stand out from the crowd. Hands-on classes. Real-world projects."
+              }
+        ]
+    }
+  }
+ ]
+  
